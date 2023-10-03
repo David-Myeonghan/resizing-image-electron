@@ -1,7 +1,7 @@
 const path = require('path');
 const os = require('os');
 const fs = require('fs')
-const resizeImge = require('resize-img');
+const resizeImg = require('resize-img');
 const {app, BrowserWindow, Menu, ipcMain, shell} = require('electron');
 
 // Uncomment this out for testing in production mode;
@@ -41,7 +41,6 @@ function createAboutWindow() {
         width: 300,
         height: 300
     })
-
     aboutWindow.loadFile(path.join(__dirname, './renderer/about.html'))
 }
 
@@ -95,7 +94,7 @@ ipcMain.on('image:resize', (e, options) => {
 // Resize the image
 async function resizeImage({imgPath, width, height, dest}) {
     try {
-        const newPath = await resizeImge(fs.readFileSync(imgPath), {
+        const newPath = await resizeImg(fs.readFileSync(imgPath), {
             width: +width,
             height: +height
         });
@@ -119,7 +118,6 @@ async function resizeImage({imgPath, width, height, dest}) {
     } catch (error) {
         console.log(error)
     }
-
 }
 
 app.on('window-all-closed', () => {

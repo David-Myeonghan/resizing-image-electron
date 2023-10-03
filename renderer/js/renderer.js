@@ -53,7 +53,7 @@ function sendImage(e) {
 }
 
 // Catch the image:done event
-ipcRenderer.on('image:donw', () => {
+ipcRenderer.on('image:done', () => {
     alertSuccess(`Image resized to ${widthInput.value} x ${heightInput.value}`)
 })
 
