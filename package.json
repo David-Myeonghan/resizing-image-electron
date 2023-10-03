@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "electron": "^26.2.4",
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  },
+  "name": "image-resizing-electron",
+
+  "description": "",
+  "productName": "image Resizer with Electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Myeonghan/resizing-image-electron.git"
+  },
+  "author": "David Ryu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David-Myeonghan/resizing-image-electron/issues"
+  },
+  "homepage": "https://github.com/David-Myeonghan/resizing-image-electron#readme"
+}
